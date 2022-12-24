@@ -16,7 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController()
+        let navController = UINavigationController(rootViewController: ToDoViewController())
+        
+        navController.navigationBar.topItem?.title = "ToDo List"
+        navController.navigationBar.backgroundColor = .blue
+        navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        window.rootViewController = navController
+        
         self.window = window
         window.makeKeyAndVisible()
     }
