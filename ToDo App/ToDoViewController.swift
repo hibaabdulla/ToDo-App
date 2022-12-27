@@ -9,7 +9,7 @@ import UIKit
 
 class ToDoViewController: UITableViewController {
     
-    let itemArray = ["EAT", "SLEEP", "SHOPPING"]
+    var itemArray = ["EAT", "SLEEP", "SHOPPING"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,30 @@ class ToDoViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
         tableView.preservesSuperviewLayoutMargins = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.addButtonPressed))
+        self.navigationItem.rightBarButtonItem = addButton
+        addButton.tintColor = .white
+    }
+    
+    @objc func addButtonPressed() {
+        
+        var textField = UITextField()
+       
+        let alert = UIAlertController(title: "Add New ToDo Items", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add Item", style: .default) { action in
+            
+            self.itemArray.append(textField.text!)
+            self.tableView.reloadData()
+        }
+        alert.addTextField { (alertTextfield) in
+            alertTextfield.placeholder = "Create new item"
+            
+            textField = alertTextfield
+            
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
         
     }
     
