@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E7EBF1298760FC007788E5 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E7EBF0298760FC007788E5 /* item.swift */; };
 		02FCB5E929556E8900095ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCB5E829556E8900095ABA /* AppDelegate.swift */; };
 		02FCB5EB29556E8900095ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCB5EA29556E8900095ABA /* SceneDelegate.swift */; };
 		02FCB5ED29556E8900095ABA /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCB5EC29556E8900095ABA /* ToDoViewController.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E7EBF0298760FC007788E5 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		02FCB5E529556E8900095ABA /* ToDo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FCB5E829556E8900095ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02FCB5EA29556E8900095ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E7EBF22987610A007788E5 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				02E7EBF0298760FC007788E5 /* item.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		02E7EBF329876116007788E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				02FCB5EC29556E8900095ABA /* ToDoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		02E7EBF5298761D5007788E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02FCB5F129556E8C00095ABA /* Assets.xcassets */,
+				02FCB5EA29556E8900095ABA /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		02FCB5DC29556E8900095ABA = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				02FCB5E829556E8900095ABA /* AppDelegate.swift */,
-				02FCB5EA29556E8900095ABA /* SceneDelegate.swift */,
-				02FCB5EC29556E8900095ABA /* ToDoViewController.swift */,
-				02FCB5F129556E8C00095ABA /* Assets.xcassets */,
+				02E7EBF22987610A007788E5 /* Data Model */,
+				02E7EBF329876116007788E5 /* Controllers */,
+				02E7EBF5298761D5007788E5 /* Supporting Files */,
 				02FCB5F629556E8C00095ABA /* Info.plist */,
 			);
 			path = "ToDo App";
@@ -129,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E7EBF1298760FC007788E5 /* item.swift in Sources */,
 				02FCB5ED29556E8900095ABA /* ToDoViewController.swift in Sources */,
 				02FCB5E929556E8900095ABA /* AppDelegate.swift in Sources */,
 				02FCB5EB29556E8900095ABA /* SceneDelegate.swift in Sources */,
